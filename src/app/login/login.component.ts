@@ -2,9 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../models/user';
 import { UserService } from '../services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import {AuthenticationService} from '../services/authentication.service';
+import { from } from 'rxjs';
+
 
 @Component({
-  selector: 'login',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -12,32 +15,41 @@ export class LoginComponent implements OnInit {
   error = false;
   username: string;
   password: string;
-  isLoading: boolean;
-  returnUrl: string;
 
   constructor(
     public router: Router,
-    public route: ActivatedRoute
-    //public user: User
-    //public userService: UserService
+    public route: ActivatedRoute,
+    public auth: AuthenticationService,
+    public user: User
   ) { }
 
   ngOnInit() {
-    // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-    // if (this.user.isLoggedIn) {
-    //   this.router.navigate(['']);
-    // }
   }
 
   onLogin() {
+    this.error = false;
 
-  }
+    // Mock Login
+    if (this.username === 'admin' && this.password === 'admin') {
+      // Mock user
+      const mockUser = new User();
+      mockUser.username = this.username;
+      this.user.setUser(mockUser);
 
-  getUser() {
+      this.router.navigate(['/home']);
+    } else {
+      console.log('Error!');
+    }
 
-  }
+    this.auth.login(this.username, this.password)
+    .subscribe((user: User) => {
+      this.user.setUser(user);
+      this.error = false;
+      this.router.navigate(['/home']);
+    }, (error) => {
+      this.error = true;
+    });
 
-  onLoginComplete() { }
-
+    }
 
 }

@@ -3,10 +3,19 @@ export class User {
     lastName: string;
     studentId: string;
     username: string;
-    password: string; //???
-    dateOfBirth: Date;
     isLoggedIn: boolean;
     email: string;
     adderss: string;
+
+
+  setUser(user: User) {
+    this.firstName = user.firstName;
+    this.lastName = user.lastName;
+    this.studentId = user.studentId;
+    this.username = user.username;
+    this.isLoggedIn = user.isLoggedIn;
+    this.email = user.email;
+    this.adderss = user.adderss;
+  }
 
 }

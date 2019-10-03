@@ -7,18 +7,26 @@ import { LoginComponent } from './login/login.component';
 import { UserService } from './services/user.service';
 import { RouterModule } from '@angular/router';
 import { SERVICES } from './imports/services';
+import { HomeComponent } from 'src/components/home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainRoutes } from './main.routing';
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from 'src/components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
-    RouterModule.forRoot([]),
-    BrowserModule
+    RouterModule.forRoot(MainRoutes, { useHash: true }),
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
-  // providers: [SERVICES],
+  providers: [SERVICES],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
