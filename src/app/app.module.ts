@@ -11,12 +11,14 @@ import { HomeComponent } from 'src/components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainRoutes } from './main.routing';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from 'src/components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     RouterModule.forRoot(MainRoutes, { useHash: true }),
