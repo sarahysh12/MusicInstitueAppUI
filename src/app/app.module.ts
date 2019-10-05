@@ -7,24 +7,28 @@ import { LoginComponent } from './login/login.component';
 import { UserService } from './services/user.service';
 import { RouterModule } from '@angular/router';
 import { SERVICES } from './imports/services';
-import { HomeComponent } from 'src/components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainRoutes } from './main.routing';
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from 'src/components/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    CarouselComponent
   ],
   imports: [
     RouterModule.forRoot(MainRoutes, { useHash: true }),
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [SERVICES],
   bootstrap: [AppComponent]
