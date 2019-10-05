@@ -6,6 +6,7 @@ export class User {
     isLoggedIn: boolean;
     email: string;
     adderss: string;
+    phone: string;
 
 
   setUser(user: User) {
@@ -16,6 +17,7 @@ export class User {
     this.isLoggedIn = user.isLoggedIn;
     this.email = user.email;
     this.adderss = user.adderss;
+    this.phone = user.phone;
   }
-
+  // TODO: increment student id automatically
 }
