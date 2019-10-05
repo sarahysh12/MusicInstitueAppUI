@@ -1,6 +1,6 @@
 .main-container {
   background-image: url("../../assets/images/main-background.jpg");
-  height: 760px;
+  height: 800px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,39 +21,7 @@
   padding: 20px;
 }
 
-
-input[type=text] {
-  width: 80%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=password] {
-  width: 80%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 25%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
+.signup{
+  height: 50px;
+  padding-top: 20px;
 }

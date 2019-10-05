@@ -7,11 +7,11 @@ import { LoginComponent } from './login/login.component';
 import { UserService } from './services/user.service';
 import { RouterModule } from '@angular/router';
 import { SERVICES } from './imports/services';
-import { HomeComponent } from 'src/components/home/home.component';
+import { HomeComponent } from 'src/app/components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainRoutes } from './main.routing';
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from 'src/components/header/header.component';
+import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @NgModule({
   declarations: [
