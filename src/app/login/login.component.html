@@ -2,8 +2,11 @@
   <div class="row">
     <div class="col-md-3"></div>
     <div class="login col-md-6">
-      <h2>Login</h2>
+      <h2>Log In</h2>
       <form class="entry-form">
+        <div *ngIf="isError" class="error-message">
+          <span>Username or Password is incorrect</span>
+        </div>
           <div class="form-group">
               <div class="input-title col-md-3">
                   <label for="login-username">Username</label>
@@ -24,10 +27,10 @@
             </div>
 
           <div class="input-group">
-              <div class="input-title col-md-3">
-                <button type="button" class="btn btn-default btn-lg" (click)="onLogin()">Log In</button>
+              <div class="input-title col-md-4">
+                <button type="button" class="btn btn-default btn-lg"  (click)="onLogin()">Log In</button>
               </div>
-              <div class="col-md-9">
+              <div class="col-md-8">
                 <div class="signup"><a href="#signup">Create A New Account</a></div>
               </div>
         </div>

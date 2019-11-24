@@ -10,8 +10,8 @@ export class User {
 
 
   setUser(user: User) {
-    this.firstName = user.firstName;
-    this.lastName = user.lastName;
+    this.firstName = user.username.split('.')[0];
+    this.lastName = user.username.split('.')[1];
     this.studentId = user.studentId;
     this.username = user.username;
     this.isLoggedIn = user.isLoggedIn;
@@ -20,4 +20,6 @@ export class User {
     this.phone = user.phone;
   }
   // TODO: increment student id automatically
+
+
 }

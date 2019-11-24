@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   isLogin = true;
+  isError = false;
 
   constructor(
     public router: Router,
@@ -31,14 +32,16 @@ export class LoginComponent implements OnInit {
     this.error = false;
 
     // Mock Login
-    if (this.username === 'admin' && this.password === 'admin') {
+    if (this.username === 'Sara.Yarshenas' && this.password === 'pass') {
       // Mock user
       const mockUser = new User();
       mockUser.username = this.username;
+      mockUser.isLoggedIn = true; //TODO more checks on token & etc
       this.user.setUser(mockUser);
 
       this.router.navigate(['/home']);
     } else {
+      this.isError = true;
       console.log('Error!');
     }
 

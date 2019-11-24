@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 
 @Component({
@@ -8,7 +9,9 @@ import { Component } from '@angular/core';
 })
 
 
-export class HeaderComponent {
+export class HeaderComponent{
+@Input() user: User;
+  constructor() {
 
-  constructor() {}
+  }
 }

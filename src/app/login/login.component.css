@@ -2,7 +2,7 @@
 .login {
   text-align: center;
   width: 40%;
-  height: 38%;
+  min-height: 40%;
   position: absolute;
   left: 35%;
   margin-left: -50px;
@@ -15,4 +15,21 @@
 .signup{
   height: 50px;
   padding-top: 20px;
+}
+
+
+.form-group{
+  padding-bottom: 50px;
+}
+
+
+.input-group button{
+  width: 120px;
+}
+
+.error-message{
+  height:30px;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

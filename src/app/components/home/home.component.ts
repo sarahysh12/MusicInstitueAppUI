@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 
 @Component({
@@ -7,8 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent {
+export class HomeComponent{
 
-  constructor() {
-  }
+  constructor(
+    public user: User
+  ) {}
+
 }
